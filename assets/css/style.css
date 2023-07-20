@@ -603,6 +603,68 @@ p {
   text-align: left;
 }
 
+.skills {
+  width: 80%;
+  max-width: 600px;
+}
+
+.skill-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #838383;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.skill-bar {
+  height: 14px;
+  background: #838383;
+  border-radius: 3px;
+}
+
+.skill-per {
+  height: 14px;
+  background: #313131;
+  border-radius: 3px;
+  position: relative;
+  animation: fillBars 2.5s 1;
+}
+
+.skill-per::before {
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background: #313131;
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 12px;
+  top: -40px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.skill-per::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #313131;
+  top: -20px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  border-radius: 2px;
+}
+
+@keyframes fillBars {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
@@ -629,6 +691,10 @@ p {
 
 #services .services-block .hardware-logo img {
   max-height: 45px;
+}
+
+#services .services-block .php-logo img {
+  max-height: 40px;
 }
 
 .services-block .separator {
