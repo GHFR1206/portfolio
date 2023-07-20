@@ -627,6 +627,10 @@ p {
   max-height: 35px;
 }
 
+#services .services-block .hardware-logo img {
+  max-height: 45px;
+}
+
 .services-block .separator {
   margin: 0;
   font-size: 13px;
